@@ -1,6 +1,7 @@
 <template>
   <v-app id="inspire">
-    <v-timeline>
+
+    <v-timeline class="container">
       <v-timeline-item
         v-for="(year, i) in years"
         :key="i"
@@ -14,10 +15,11 @@
           ></span>
         </template>
         <div class="py-4">
-          <h2 :class="`headline font-weight-light mb-4 ${year.color}--text`">Lorem ipsum</h2>
-          <div>
-            Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.
-          </div>
+          <h2 :class="`headline font-weight-light mb-4 ${year.color}--text`"> {{year.job}}</h2>
+
+            <v-row>{{year.text1}} </v-row>
+            <v-row>{{year.text2}}</v-row>
+            <v-row><i><b>Référence: </b>{{year.reference1}}</i></v-row>
         </div>
       </v-timeline-item>
     </v-timeline>
@@ -33,7 +35,7 @@ years: [
       {
         color: 'cyan',
         job: 'OCEA SMART BUILDING',
-        year: '2016 - Poste actuel',
+        year: '2016 - Aujourd\'hui',
         text1: "Projet 1 - Product Owner de la Solution « Le Hab »: pilotage de la roadmap produit, animation des rituels agile, rédaction des spécifications et des tests, gestion du staffing, gestion du product backlog, gestion du planning, gestion du budget et suivi de la facturation, accompagnement et mise en oeuvre de la solution chez les bailleurs ",
         text2: "Projet 2 - Responsable de comptes ISI FOR YOU: Suivi de l’exploitation des clients de la solution, Valorisation des portefeuilles clients, Réalisation du suivi administratif et financier des clients",
         reference1: "Engie, BNPP REPM, Allianz, BPCE, Habitat en Région, Terre d'Opale Habitat, Ekidom, Ophéa",
@@ -57,3 +59,12 @@ years: [
   }),
 }
 </script>
+
+<style scoped>
+
+.container {
+  display:flex;
+  flex-direction: column;
+}
+
+</style>
