@@ -18,10 +18,10 @@
         <p>&copy; Copyright {{ new Date().getFullYear() }}</p>
               <div class="flex">
 
-<a class="icons" href="https://www.linkedin.com/in/william-azis-09601127/"><v-icon >mdi-linkedin</v-icon> </a>
-<a class="icons" href="mailto:azis.william@gmail.com"><v-icon >mdi-mail</v-icon></a>
+                <a class="icons" href="https://www.linkedin.com/in/william-azis-09601127/"><v-icon >mdi-linkedin</v-icon> </a>
+                <a class="icons" href="mailto:azis.william@gmail.com"><v-icon >mdi-mail</v-icon></a>
 
-</div>
+              </div>
       </v-card-title>
 
 
