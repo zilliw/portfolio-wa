@@ -1,7 +1,7 @@
 <template>
   <v-app id="inspire">
-
-    <v-timeline class="container">
+    <div class="container">
+    <v-timeline >
       <v-timeline-item
         v-for="(year, i) in years"
         :key="i"
@@ -23,6 +23,7 @@
         </div>
       </v-timeline-item>
     </v-timeline>
+    </div>
   </v-app>
 </template>
 
@@ -65,6 +66,8 @@ years: [
 .container {
   display:flex;
   flex-direction: column;
+  padding-left: 10%;
+  padding-top: 0;
 }
 
 </style>
