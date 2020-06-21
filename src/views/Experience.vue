@@ -19,7 +19,7 @@
 
             <v-row>{{year.text1}} </v-row>
             <v-row>{{year.text2}}</v-row>
-            <v-row><i><b>Référence: </b>{{year.reference1}}</i></v-row>
+            <v-row><i><b>Références: </b>{{year.reference1}}</i></v-row>
         </div>
       </v-timeline-item>
     </v-timeline>
