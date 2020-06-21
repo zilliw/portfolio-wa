@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Experience from '../views/Experience.vue'
-import About from '../views/About.vue'
+import Formations from '../views/Formations.vue'
+import Interets from '../views/Interets.vue'
 
 Vue.use(VueRouter)
 
@@ -12,9 +13,14 @@ Vue.use(VueRouter)
     component: Experience
   },
   {
-    path: '/about',
-    name: 'About',
-    component: About
+    path: '/Formations',
+    name: 'Formations',
+    component: Formations
+  },
+  {
+    path: '/Interets',
+    name: 'Interets',
+    component: Interets
   }
 ]
 

@@ -68,18 +68,19 @@
       centered
       grow>
         <v-tab class="nav"> 
-            <router-link to="/">Experiences Professionnelles</router-link></v-tab>
+            <router-link to="/" class="tabs">Experiences Professionnelles</router-link></v-tab>
         <v-tab class="nav"> 
-            <router-link to="/About">About</router-link></v-tab>
-            
-        <v-tab>Formations</v-tab>
-        <v-tab>Intérêts</v-tab>
+            <router-link to="/Formations" class="tabs">Formations et Certification</router-link></v-tab>
+        <v-tab class="nav"> 
+            <router-link to="/Interets" class="tabs">Interets</router-link></v-tab>
+
     </v-tabs>
 
     </v-app-bar>
 
 
   </v-layout>
+  
 </template>
 
 <script> 
@@ -143,7 +144,8 @@ export default {
   margin-bottom: 5%;
   text-align: center;
 }
-.tab {
+.tabs {
   color: white;
+  text-decoration: none;
 }
 </style>
