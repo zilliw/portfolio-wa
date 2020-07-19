@@ -1,7 +1,6 @@
 <template>
   <v-app id="inspire">
     <div class="container">
-      <h1> Experiences professionnelles</h1>
     <v-timeline >
       <v-timeline-item
         v-for="(year, i) in years"

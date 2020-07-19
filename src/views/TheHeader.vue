@@ -64,17 +64,23 @@
 
 
               </v-toolbar-title>
-        <v-tabs
-      centered
-      grow>
-        <v-tab class="nav"> 
-            <router-link to="/" class="tabs">Experiences Professionnelles</router-link></v-tab>
-        <v-tab class="nav"> 
-            <router-link to="/Formations" class="tabs">Formations et Certification</router-link></v-tab>
-        <v-tab class="nav"> 
-            <router-link to="/Interets" class="tabs">Interets</router-link></v-tab>
-
-    </v-tabs>
+            <v-tabs cols="9"
+                    centered
+                    grow
+            >
+                <v-tab class="tab" to="/experience">
+                   Experiences professionnelles
+                    </v-tab>
+                <v-tab class="tab" to="/certification">
+                    Certification
+                </v-tab>
+                <v-tab to="/study">
+                   Formations
+                    </v-tab>
+                <v-tab to="/hobbies">
+                    Intérêts
+                    </v-tab>
+            </v-tabs>
 
     </v-app-bar>
 

@@ -1,30 +1,37 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Experience from '../views/Experience.vue'
-import Formations from '../views/Formations.vue'
-import Interets from '../views/Interets.vue'
+import Formations from '../views/Formations'
+import Experience from '../views/Experience'
+import Hobbies from '../views/Hobbies'
+
 
 Vue.use(VueRouter)
 
   const routes = [
+    {
+      path: '/',
+      name: 'Home',
+      component: Experience
+    },
   {
-    path: '/',
-    name: 'Experience',
-    component: Experience
-  },
-  {
-    path: '/Formations',
+    path: '/formations',
     name: 'Formations',
     component: Formations
   },
-  {
-    path: '/Interets',
-    name: 'Interets',
-    component: Interets
-  }
+    {
+      path: '/experience',
+      name: 'Experience',
+      component: Experience
+    },
+    {
+      path: '/hobbies',
+      name: 'Hobbies',
+      component: Hobbies
+    }
 ]
 
 const router = new VueRouter({
+  mode: 'history',
   routes
 })
 
