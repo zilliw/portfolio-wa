@@ -17,6 +17,7 @@
 
 <script>
 
+
 import TheFooter from './views/TheFooter.vue'
 import TheHeader from './views/TheHeader.vue'
 
