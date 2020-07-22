@@ -71,14 +71,11 @@
                 <v-tab class="tab" to="/experience">
                    Experiences professionnelles
                     </v-tab>
-                <v-tab class="tab" to="/certification">
-                    Certification
+                <v-tab class="tab" to="/formations">
+                    Formations
                 </v-tab>
-                <v-tab to="/study">
-                   Formations
-                    </v-tab>
                 <v-tab to="/hobbies">
-                    Intérêts
+                    Hobbies
                     </v-tab>
             </v-tabs>
 
