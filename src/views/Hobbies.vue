@@ -6,6 +6,6 @@
 
 <script>
   export default {
-    name: 'Interets',
+
   }
 </script>

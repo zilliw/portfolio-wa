@@ -1,85 +1,54 @@
 <template>
-      <v-app id="inspire">
-          <div class="container">
-              <div id="app">
-                    <v-app id="inspire">
-                      <v-card
-                        :loading="loading"
-                        class="mx-auto my-12"
-                        max-width="374"
-                      >
-                        <v-img
-                          height="200"
-                          src="../assets/logo_uvsq.jpg"
-                          contains
-                        ></v-img>
-                                      <v-card-title >2007 - 2009 </v-card-title>             
-                        <v-card-text>
-                          <v-row
-                            align="center"
-                            class="mx-0"
-                          >              
-                          </v-row>
-      
-                    
-                          <div>Master Développement Durable – Université de Versailles (BAC + 5)</div>
-                        </v-card-text>
-                    
-                        <v-divider class="mx-4"></v-divider>
-                    
-                        <v-card-title>2004 - 2007 </v-card-title>
-                                                    <div>Licence Economie internationale – Université de Versailles (BAC + 3)</div>
-                        <v-card-text>
-                          <v-chip-group
-                            v-model="selection"
-                            active-class="deep-purple accent-4 white--text"
-                            column
-                          >
-                            <v-chip>5:30PM</v-chip>
-                    
-                            <v-chip>7:30PM</v-chip>
-                    
-                            <v-chip>8:00PM</v-chip>
-                    
-                            <v-chip>9:00PM</v-chip>
-                          </v-chip-group>
-                        </v-card-text>
-                    
-                        <v-card-actions>
-                          <v-btn
-                            color="deep-purple lighten-2"
-                            text
-                            @click="reserve"
-                          >
-                            Reserve
-                          </v-btn>
-                        </v-card-actions>
-                      </v-card>
-                    </v-app>
-              </div>
-          </div>
-      </v-app>
+    <v-app id="inspire">
+        <div class="container">
+            <v-card
+             max-width="374">
+
+                <v-img
+                height="200 "
+                src="../assets/logo_uvsq.jpg"
+                contains
+                ></v-img>
+                
+                <div                 
+                v-for="(graduate, i) in graduates"
+                :key="i">
+
+                <v-card-title>
+                {{graduate.year}}   
+                </v-card-title>   
+
+                <v-card-text>
+                    <h1 class="titles">{{graduate.job}}</h1>
+                    <div>{{graduate.text}}</div>
+                    <v-chip color="rgb(65, 178, 154)" text-color="white">{{graduate.level}}</v-chip>
+                </v-card-text>
+
+                </div>
+            </v-card>
+        </div>
+    </v-app>
 </template>
 
 <script>
-  export default {
+
+
+export default {
     name: 'Formations',
 
   data: () => ({
-years: [
+graduates: [
       {
-        color: 'cyan',
-        job: 'Université Versailles-Saint-Quentin-en-Yvelines',
-        logo: '../assets/logo_ocea.jpg',
+        job: 'Université Versailles Saint-Quentin-en-Yvelines',
         year: '2007 - 2009',
-        text: "Master Développement Durable – Université de Versailles (BAC + 5)",
+        text: "Master Développement Durable",
+        level: 'BAC +5'
       },
       {
-        color: 'cyan',
-        job: 'Université Versailles-Saint-Quentin-en-Yvelines',
-        logo: 'assets/logo_zento.png',
+        job: 'Université Versailles Saint-Quentin-en-Yvelines',
         year: '2004 - 2007',
-        text: "Licence Economie internationale – Université de Versailles (BAC + 3)",
+        text: "Licence Economie internationale",
+        level: 'BAC +3'
       },
       ],
   }),
@@ -90,9 +59,16 @@ years: [
 
 .container {
   display:flex;
-  flex-direction: column;
-  flex-grow: 1;
+  flex-direction: row;
   padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 1%;
+  padding-right: 1%;  
+  justify-content: center;
+}
+
+.titles {
+  font-size:16px;
 }
 
 </style>
