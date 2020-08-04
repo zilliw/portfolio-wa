@@ -5,14 +5,14 @@
       v-model="drawer"
       app
     >
-            <v-img src="../assets/photo.png" 
-            >
+            <v-img src="../assets/photo.png">
             </v-img>
-            <div class="name">
-                <p> <strong> William AZIS</strong></p>
-                <p> 3 rue du bocage</p>
-                <p> 92310 Sèvres</p>
-                        </div>  
+            <div class="information">
+                <p padding> <v-icon green>mdi-account</v-icon>    William AZIS</p>
+                <p> <v-icon>mdi-phone</v-icon>  06.15.90.55.XX</p>  
+                <p> <v-icon>mdi-alpha-a-box</v-icon>  34 ans</p> 
+
+            </div>
               <v-expansion-panels
               :multiple="false">
                       <v-expansion-panel
@@ -53,17 +53,6 @@
         </v-col >
 
 
-              <v-toolbar-title
-              padless>
-              <div>
-              <v-col>
-
-              </v-col>
-              </div>
-
-
-
-              </v-toolbar-title>
             <v-tabs cols="9"
                     centered
                     grow
@@ -74,9 +63,10 @@
                 <v-tab class="tab" to="/formations">
                     Formations
                 </v-tab>
-                <v-tab to="/hobbies">
-                    Hobbies
-                    </v-tab>
+                 <v-tab class="tab" to="/hobbies">
+                    Centres d'intérêts
+                </v-tab>
+
             </v-tabs>
 
     </v-app-bar>
@@ -137,15 +127,16 @@ export default {
 </script>
 
 <style scoped>
-.name {
-  font-size: 16px;
+.information {
+  font-size: 14px;
   padding-left: 0%;
   padding-right: 0%;  
   padding-top: 0%;
   padding-bottom: 0%;
   margin-top: 5%;
   margin-bottom: 5%;
-  text-align: center;
+  margin-left: 10%;
+  text-align: left;
 }
 .tabs {
   color: white;
